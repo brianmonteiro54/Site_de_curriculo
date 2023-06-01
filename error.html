@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Página de Erro</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+
+ <style>
+      /* Estilos CSS para a animação */
+      .loader {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 20vh;
+        background-color: #f3f3f3;
+      }
+
+      .loader p {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #555;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+      }
+
+      .loader p.show {
+        opacity: 1;
+      }
+
+      .loader .spinner {
+        width: 30px;
+        height: 30px;
+        border: 6px solid #ccc;
+        border-top-color: #555;
+        border-radius: 50%;
+        animation: spin 1s infinite linear;
+        opacity: 0;
+        transform: scale(0);
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+      }
+
+      .loader .spinner.show {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+  </head>
+  <body>
+    <div class="error-container">
+      <h1>Erro 404 - Página não encontrada</h1>
+      <p>A página que você está tentando acessar não existe.</p>
+      <p>Por favor, verifique se digitou o endereço corretamente</p>
+    </div>
+
+<div class="loader">
+      <div class="spinner"></div>
+      <p class="message">Aguarde, você será redirecionado para a pagina principal em <span id="countdown">5</span> segundos...</p>
+    </div>
+    <script>
+      // Redirecionar para a página principal após 5 segundos
+      var countdown = 5;
+      var countdownElement = document.getElementById('countdown');
+      var messageElement = document.querySelector('.message');
+      var spinnerElement = document.querySelector('.spinner');
+
+      setTimeout(function() {
+        messageElement.classList.add('show');
+        spinnerElement.classList.add('show');
+      }, 1000);
+
+      var countdownInterval = setInterval(function() {
+        countdown--;
+        countdownElement.innerText = countdown;
+        if (countdown === 0) {
+          clearInterval(countdownInterval);
+          window.location.href = 'https://curriculos.soneca.dev';
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>

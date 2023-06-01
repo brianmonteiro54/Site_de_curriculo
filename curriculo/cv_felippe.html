@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+  <head>
+
+    <meta charset="UTF-8" />
+
+    <title>CV - Felippe Matheus</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" href="curriculo.png" type="image/x-icon">
+
+    <link
+
+      rel="stylesheet"
+
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+
+    />
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div class="name">
+        <button  id="downloadButton" onclick="generatePDF()">Baixar Currículo <i class="fas fa-download"></i></button>
+        <span class="name-left">Felippe Mattheus Oliveira da Silva</span> 
+        
+        <span class="name-right">
+
+          <p class="endereco">
+
+            Belém - PA <i class="fas fa-home"></i>
+
+          </p>
+
+          <p>(91) 98588-5072 <i class="fas fa-phone"></i></p>
+
+          <p>felippeprofissionalsi@gmail.com <i class="far fa-envelope"></i></p>
+
+          <p style="width: 300px">
+
+            <a href="https://www.linkedin.com/in/flppmos" target="_blank">https://www.linkedin.com/in/flppmos</a> <i class="fab fa-linkedin"></i>
+           
+
+          </p>
+        
+        </span>
+
+      </div>
+
+
+
+      <p class="intro">
+
+        Profissional de Infraestrutura de TI buscando me tornar um analista, com ampla experiência em
+
+        administração de servidores, redes e sistemas operacionais. Especializado em garantir a
+
+        disponibilidade, segurança e eficiência dos ambientes de TI. Habilidades em virtualização,
+
+        gerenciamento de nuvem e implementação de soluções tecnológicas. Focado em otimizar
+
+        processos e oferecer suporte técnico de qualidade para impulsionar o sucesso operacional da
+
+        empresa.
+
+      </p>
+
+      <h2 class="section-heading">Experiência Profissional</h2>
+
+      <ul class="experience-list">
+
+        <li>
+
+          <p class="position">Assistente de Infraestrutura de TI</p>
+
+          <p class="company">SEA Telecom - Abril/2023 - atual</p>
+
+          <ul class="responsibilities">
+
+            <li>
+
+              Trabalha como administrador de sistemas dedicado no departamento de Operações de
+
+              Informação ; Métodos de controle de acesso de usuários implementados e monitorados;
+
+              Sistemas resolvidos, diagnosticados e corrigidos para garantir que os objetivos funcionais
+
+              foram alcançados; Garante que todos os dados críticos de TI permanecem protegidos com cópias no local e
+
+              fora do local; Trabalha com equipes de suporte ao usuário e outros membros da equipe para gerenciar e
+
+              monitorar todos os sistemas com eficácia.
+
+            </li>
+
+          </ul>
+
+      <p class="position">Auxiliar de Infraestrutura de TI-</p>
+
+      <p class="company">SEA Telecom - Fevereiro/2022 - Abril/2023</p>
+
+      <ul class="responsibilities">
+
+        <li>
+
+               Tarefas de administração de banco de dados e ferramentas OpenSource com eficiência;
+
+               Analisei os processos manuais existentes e desenvolvi e implementei automações;
+
+               Trabalhava para melhorar a experiência do usuário por meio de comunicação e melhorias
+
+               criteriosas no fluxo de tarefas, Manteve os padrões de segurança e contribuiu para a
+
+               evolução e melhoria dos processos de segurança.
+
+      </ul>
+
+      <h2 class="section-heading">Habilidades Técnicas</h2>
+
+      <ul class="skills-list">
+
+        <li>Administração de servidores físicos e virtuais</li>
+
+        <li>AWS</li>
+
+        <li>Google Cloud</li>
+
+        <li>Azure</li>
+
+        <br/>
+
+        <li>Protocolos de comunicação, configuração de roteadores, switches e firewalls</li>
+
+        <br/>
+
+        <li>Automação: Terraform, Ansible, Shell</li>
+
+        <br/>
+
+        <li>Sistema Operacional Windows e Linux</li>
+
+        <li>Openstack</li>
+
+      </ul>
+
+      <h2 class="section-heading">Formação</h2>
+
+      <ul class="education">
+
+        <li><strong class="certification-blue">UFRA - Bacharelado em Sistemas de Informação</strong><span class="certification-black"> - 8º semestre - 12/2023</span></li>
+
+      </p>
+</ul>
+      <h2 class="section-heading">Cursos e Certificações</h2>
+
+      <p class="certification">
+        <ul class="education">
+        <li><strong class="certification-blue">Fundamentos de AWS</strong><span class="certification-black">, Escola da Nuvem – 2023</span></li>
+
+      </p>
+
+    </ul>
+
+    </div>
+
+    
+    <script>
+      function generatePDF() {
+        const fileUrl = 'Felippe_Mattheus_Oliveira_da_Silva.pdf';
+        const link = document.createElement('a');
+        link.href = fileUrl;
+        link.download = 'Felippe_Mattheus_Oliveira_da_Silva.pdf';
+        link.target = '_blank';
+        link.click();
+        };
+    </script>
+
+  </body>
+
+</html>
+

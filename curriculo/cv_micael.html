@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CV - Micael Cesar</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      <link rel="icon" href="curriculo.png" type="image/x-icon">
+  </head>
+  <body>
+    <div class="container">
+      <div class="name">
+        <button  id="downloadButton" onclick="generatePDF()">Baixar Currículo <i class="fas fa-download"></i></button>
+        <span class="name-left">Micael Cesar Souza de Melo</span>
+        <span class="name-right">
+          <p class="endereco">
+            Pitimbu, Natal, Rio Grande do Norte <i class="fas fa-home"></i>
+          </p>
+          <p>(81) 9545-2922 <i class="fas fa-phone"></i></p>
+          <p>micaelcsm@gmail.com <i class="far fa-envelope"></i></p>
+          <p style="width: 379px"><a href="https://www.linkedin.com/in/flppmos" target="_blank">linkedin.com/in/micael-cesar-souza-de-melo-07496787</a> <i class="fab fa-linkedin"></i>
+          </p>
+          
+        </span>
+      </div>
+
+      <p class="intro">
+        Com uma carreira de 10 anos em provedores de internet, sou um técnico em redes de computador
+        altamente capacitado. Possuo formação em técnico de redes de computadores 
+        pela escola Maria Eduarda de Barros e certificados em cabeamento estruturado, NR35 e NR10. 
+        Além disso, sou especialista em redes GPON, CFTV e OLT pela Intelbras, com experiência em instalação
+        e manutenção de computadores e notebooks. Tenho amplo conhecimento em telecomunicações e informática, 
+        adquirido por meio de cursos e treinamentos nas áreas de redes de computadores, cabeamento estruturado,
+        fibra óptica, CFTV, certificação GPON Intelbras, NR35, NR10 e atendimento ao cliente. 
+        Passo por uma transição de carreira onde busco atuar na área de cloud.
+      </p>
+      <h2 class="section-heading">Experiência Profissional</h2>
+      <ul class="experience-list">
+        <li>
+          <p class="position">Técnico em Redes de computadores</p>
+          <p class="company">Omnet Tecnologia - 10/2020 até 03/2023</p>
+          <ul class="responsibilities">
+            <li>
+              Instalador e reparador Técnico.
+              Técnico em infraestrutura.
+              Monitoramento da rede.
+            </li>
+          </ul>
+      <p class="position">Técnico em Redes de Computadores</p>
+      <p class="company">PlanaltoNet- 06/2013 até 04/2018</p>
+      <ul class="responsibilities">
+         <li>
+           Instalação e manutenção da rede fibra e UTP.
+           Implantação de novas áreas. 
+           Lançamento de cabos ópticos e toda estrutura externa
+          </li>            
+        </ul>
+      <h2 class="section-heading">Habilidades Técnicas</h2>
+      <ul class="skills-list">
+        <li>Redes de Computadores</li>
+        <li>Infra estrutura de redes</li>
+        <li>Suporte Técnico</li>
+        <li>Software</li>
+        <li>Hardware</li>
+        <li>GPON</li>
+        <li>FTTH</li>
+        <li>Fibra óptica</li>
+        <li>AWS</li>
+        <li>Azure</li>
+      </ul>
+      <h2 class="section-heading">Formação</h2>
+      <ul class="education">
+        <li><strong class="certification-blue">Técnico em redes de computadores</strong><span class="certification-black"> - Maria Eduarda de Ramos Barros - 07/2013 até 12/2014</span></li>
+      </p></ul>
+      <h2 class="section-heading">Cursos e Certificações</h2>
+      <p class="certification">
+        <ul class="education">
+        <li><strong class="certification-blue">Fundamentos de AWS</strong><span class="certification-black">, Escola da Nuvem – 2023</span></li>
+        <li><strong class="certification-blue">Cabeamento estruturado</strong><span class="certification-black">, Furukawa – 2014</span></li>
+        <li><strong class="certification-blue">Olt</strong><span class="certification-black">, Intelbras – 2018</span></li>
+      </p>
+    </ul>
+    </div>
+
+
+    <script>
+      function generatePDF() {
+        const fileUrl = 'Micael_Cesar_Souza_de_Melo.pdf';
+        const link = document.createElement('a');
+        link.href = fileUrl;
+        link.download = 'Micael_Cesar_Souza_de_Melo.pdf';
+        link.target = '_blank';
+        link.click();
+        };
+    </script>
+
+  </body>
+</html>

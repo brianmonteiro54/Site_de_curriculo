@@ -86,16 +86,31 @@
     </div>
 
     
-
-  <script>
-    function generatePDF() {
-      const fileUrl = 'Brian_Richard_Ribeiro_Monteiro.pdf';
-      const link = document.createElement('a');
-      link.href = fileUrl;
-      link.download = 'Brian_Richard_Ribeiro_Monteiro.pdf';
-      link.target = '_blank';
-      link.click();
-      };
-  </script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.js"></script>
+ <script>
+      function generatePDF() {
+        const element = document.querySelector('.container');
+        const opt = {
+          margin: 10,
+          filename: 'Micael_Cesar_Souza_de_Melo.pdf',
+          image: { type: 'jpeg', quality: 0.98 },
+          html2canvas: { scale: 2 },
+          jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        };
+  
+        // Ocultar o botão de download antes de gerar o PDF
+        const downloadButton = document.getElementById('downloadButton');
+        downloadButton.style.visibility = 'hidden';
+  
+        html2pdf()
+          .set(opt)
+          .from(element)
+          .save()
+          .then(() => {
+            // Restaurar a visibilidade e posição do botão de download após gerar o PDF
+            downloadButton.style.visibility = 'visible';
+          });
+      }
+    </script>
   </body>
 </html>
